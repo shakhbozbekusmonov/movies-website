@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9-dars</title>
+    <title>Movies - Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
     ">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -16,10 +16,70 @@
 
     <section class="movies">
         <div class="container">
-            
+            <form class="js-search-form my-5" method="GET">
+                <div class="input-group">
+                    <input class="js-search-form-input form-control" type="search" placeholder="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+
+            <ul class="js-movies-list row">
+                <p class="text-white">Coming...</p>
+            </ul>
         </div>
     </section>
 
+
+    <!-- MOVIES MODAL START -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-body row">
+                <div class="col-5">
+                    <h2 class="modal-title"></h2>
+                    <iframe class="modal-iframe" width="447" height="251" src="https://www.youtube.com/embed/4hZi5QaMBFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="col-7">
+                    <div class="d-flex justify-content-between flex-column h-100">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <span class="modal-rating rating-icon d-flex align-items-center">7.4</span>
+                                <span class="modal-year year-icon d-flex align-items-center">2012</span>
+                                <span class="modal-runtime runtime-icon d-flex align-items-center">1 hrs 6 min</span>
+                            </div>
+                            <div class="modal-categories">s,mfjkdsfjk</div>
+                            <p class="modal-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel repellendus molestiae mollitia odit modi optio commodi non porro vero alias minima dignissimos, similique magni assumenda dolorem. Ullam eius sint est.</p>
+                        </div>
+                        
+                        <a class="modal-link" href="" target="blank">Show on IMDb</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- MOVIES MODAL END -->
+
+    <!-- MOVIES TEMPLATE START -->
+      <template class="js-movies-temp">
+        <li class="js-movies-item movies-item col-12 col-sm-4 col-md-4 col-lg-3 mb-3">
+            <div class="movies-box rounded p-3 text-bg-secondary d-flex flex-column justify-content-between h-100">
+                <img class="js-movies-img mx-auto img-fluid mb-2" src="" height="203" alt="">
+
+                <h3 class="js-movies-title mb-4"></h3>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="js-movies-rating rating-icon d-flex align-items-center"></span>
+                    <span class="js-movies-year year-icon d-flex align-items-center"></span>
+                    <span class="js-movies-runtime runtime-icon d-flex align-items-center"></span>
+                </div>
+                <div class="js-movies-categories mb-2"></div>
+
+                <button class="js-movies-btn btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">More info</button>
+            </div>
+        </li>
+      </template>
+    <!-- MOVIES TEMPLATE END -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/movies.js"></script>
