@@ -16,15 +16,50 @@
 
     <section class="movies">
         <div class="container">
-            <form class="js-search-form my-5" method="GET">
+            <form class="js-search-form my-5" 
+                  action="https://echo.htmlacademy.ru/courses"
+                  method="GET"
+                  autocomplete="off">
                 <div class="input-group">
-                    <input class="js-search-form-input form-control" type="search" placeholder="Search">
+                    <input class="js-search-form-input form-control me-2" 
+                           type="search" 
+                           name="search"
+                           aria-label="Search your movie"
+                           placeholder="Search">
+
+                    <select class="js-search-form-select form-select me-2" name="category" aria-label="Choose your category">
+                        <option value="all">All</option>
+                    </select>
+
+                    <input class="js-from-year form-control me-2" 
+                           type="number" 
+                           name="movie_from_year"
+                           aria-label="Enter your from year movie"
+                           placeholder="From year...">
+
+                    <input class="js-to-year form-control me-2" 
+                           type="number" 
+                           name="movie_to_year"
+                           aria-label="Enter your to year movie"
+                           placeholder="To year...">
+
+                    <select class="js-search-form-sort form-select me-2" name="sorted_movies" aria-label="Sorted movies">
+                        <option disabled hidden selected>Sorted</option>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="oldest-latest">Oldest-Latest</option>
+                        <option value="latest-oldest">Latest-Oldest</option>
+                        <option value="low-rated">Low-Rated</option>
+                        <option value="high-rated">High-Rated</option>
+                    </select>
                     <button class="btn btn-primary" type="submit">Search</button>
                 </div>
             </form>
 
             <ul class="js-movies-list row">
-                <p class="text-white">Coming...</p>
+                <li class="loader-container">
+                    <img class="loader" src="./images/loader.svg" alt="Loader">
+                </li>
             </ul>
         </div>
     </section>
