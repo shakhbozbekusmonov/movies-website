@@ -88,6 +88,16 @@ a{
     height: 200px;
 }
 
+.media-uchun{
+    width: 16%;
+}
+
+@media only screen and (max-width: 500px) {
+    .media-uchun{
+        width: 100%;
+    }
+}
+
 .movies-item{
     min-height: 400px;
     border-radius: 10px;
@@ -125,4 +135,10 @@ a{
     background-size: 20px;
     margin-right: 10px;
     display: inline-block;
+}
+
+@media only screen and (max-width: 556px) {
+    .modal-iframe{
+        width: 100%;
+    }
 }

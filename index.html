@@ -16,34 +16,34 @@
 
     <section class="movies">
         <div class="container">
-            <form class="js-search-form my-5" 
+            <form class="js-search-form my-3 my-md-5 d-flex justify-content-between align-items-center flex-wrap" 
                   action="https://echo.htmlacademy.ru/courses"
                   method="GET"
                   autocomplete="off">
-                <div class="input-group">
-                    <input class="js-search-form-input form-control me-2" 
+                
+                    <input class="js-search-input  media-uchun form-control me-0 me-md-2 mb-2 mb-md-0" 
                            type="search" 
                            name="search"
                            aria-label="Search your movie"
                            placeholder="Search">
 
-                    <select class="js-search-form-select form-select me-2" name="category" aria-label="Choose your category">
+                    <select class="js-select-genres  media-uchun form-select me-0 me-md-2 mb-2 mb-md-0" name="category" aria-label="Choose your category">
                         <option value="all">All</option>
                     </select>
 
-                    <input class="js-from-year form-control me-2" 
+                    <input class="js-from-year  media-uchun form-control me-0 me-md-2 mb-2 mb-md-0" 
                            type="number" 
                            name="movie_from_year"
                            aria-label="Enter your from year movie"
                            placeholder="From year...">
 
-                    <input class="js-to-year form-control me-2" 
+                    <input class="js-to-year  media-uchun form-control me-0 me-md-2 mb-2 mb-md-0" 
                            type="number" 
                            name="movie_to_year"
                            aria-label="Enter your to year movie"
                            placeholder="To year...">
 
-                    <select class="js-search-form-sort form-select me-2" name="sorted_movies" aria-label="Sorted movies">
+                    <select class="js-movies-sort  media-uchun form-select me-0 me-md-2 mb-2 mb-md-0" name="sorted_movies" aria-label="Sorted movies">
                         <option disabled hidden selected>Sorted</option>
                         <option value="a-z">A-Z</option>
                         <option value="z-a">Z-A</option>
@@ -52,8 +52,8 @@
                         <option value="low-rated">Low-Rated</option>
                         <option value="high-rated">High-Rated</option>
                     </select>
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </div>
+                    <button class="btn btn-primary media-uchun " type="submit">Search</button>
+                
             </form>
 
             <ul class="js-movies-list row">
@@ -70,11 +70,11 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-body row">
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <h2 class="modal-title"></h2>
                     <iframe class="modal-iframe" width="447" height="251" src="https://www.youtube.com/embed/4hZi5QaMBFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="col-7">
+                <div class="col-12 col-md-5">
                     <div class="d-flex justify-content-between flex-column h-100">
                         <div>
                             <div class="d-flex justify-content-between align-items-center w-100">
